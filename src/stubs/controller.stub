@@ -1,0 +1,75 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Http\Requests\{{ request_class }};
+use App\Models\{{ model_class }};
+use App\Http\Resources\{{ resource_class }};
+
+
+class {{ class }} extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \App\Http\Resources\{{ resource_class }}
+     */
+    public function index()
+    {
+        return {{ resource_class }}::collection({{ model_class }}::paginate(10));
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \App\Http\Requests\{{ request_class }}  $request
+     * @return \App\Http\Resources\{{ resource_class }}
+     */
+    public function store({{ request_class }} $request)
+    {
+        {{ model_class }}::create($request->all());
+        return response()->json([
+            'message' => 'row created'
+        ],201);
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \App\Http\Resources\{{ resource_class }}
+     */
+    public function show($id)
+    {
+        return new {{ resource_class }}({{ model_class }}::findOrFail($id));
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \App\Http\Requests\{{ request_class }}  $request
+     * @param  int  $id
+     * @return \App\Http\Resources\{{ resource_class }}
+     */
+    public function update({{ request_class }} $request, $id)
+    {
+        ${{ model_var }} = {{ model_class }}::findOrFail($id);
+        ${{ model_var }}->update($request->all());
+        return new {{ resource_class }}(${{ model_var }});
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        ${{ model_var }} = {{ model_class }}::findOrFail($id);
+        ${{ model_var }}->delete();
+         return response()->json([
+            'message' => 'row deleted'
+        ],201);
+    }
+}
