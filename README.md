@@ -26,6 +26,13 @@ for other types of columns you can find them in
 [Laravel Docs](https://laravel.com/docs/8.x/migrations#creating-columns)
 
 ### The Generation Resualt
+![migration](https://user-images.githubusercontent.com/24508555/95490591-b3229880-0998-11eb-9c3f-3664a39918fd.png)
+![model](https://user-images.githubusercontent.com/24508555/95490661-d1889400-0998-11eb-994a-ba122ba266d5.png)
+![request](https://user-images.githubusercontent.com/24508555/95490815-0bf23100-0999-11eb-9b01-24cb081145c6.png)
+![carbon](https://user-images.githubusercontent.com/24508555/95490851-1f9d9780-0999-11eb-9640-aead5198e7b6.png)
+![controller](https://user-images.githubusercontent.com/24508555/95490947-42c84700-0999-11eb-8e9e-3e988f424703.png)
+
+
 
 
 
