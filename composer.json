@@ -1,0 +1,30 @@
+{
+    "name": "ion/crud-generator",
+    "description": "A simple crud generator for Laravel Framework",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "ION\\Crud\\" : "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mohammed Al-kutrani",
+            "email": "mohammedalkutrani@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.3",
+        "laravel/framework": "^7.2|^8.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ION\\Crud\\IONCrudProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev"
+}
