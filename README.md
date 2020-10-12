@@ -18,7 +18,7 @@ You can create :
 
 Via this command
 ```bash
-php artisan make:crud example --f="titile:string, is_visible:boolean"
+php artisan make:crud example --f="title:string, is_visible:boolean"
 ```
 the `id` and `timestaps` will be generated in migraion file by default.
 
